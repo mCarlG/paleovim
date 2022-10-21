@@ -20,7 +20,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	  'clone', 
 	  '--depth', 
 	  '1', 
-	  'https://github.com/wbthomason/packer.nvim', 
+	  'https://github.com/wbthomason/packer.nvim',
 	  install_path
   })
   vim.api.nvim_command("packadd packer.nvim")
@@ -42,7 +42,7 @@ packer.init({
 packer.startup(function(use)
 	use({ "wbthomason/packer.nvim" })
 
-	use({ 
+	use({
 		"williamboman/mason.nvim",
 		cmd = "Mason*",
 		module = "mason-tool-installer",
@@ -52,10 +52,20 @@ packer.startup(function(use)
 
 	use({ "neovim/nvim-lspconfig", config = local_config("lsp.lsp") })
 
-	use({ 
+	use({
 		"nvim-treesitter/nvim-treesitter",
 		config = local_config("treesitter"),
 		run = ":TSUpdate",
+	})
+
+	use({
+		"folke/which-key.nvim",
+		config = local_config(""),
+	})
+
+	use({
+		"feline-nvim/feline.nvim",
+		config = local_config("feline"),
 	})
 
 	use({

@@ -43,9 +43,6 @@ function M.custom_lsp_attach(client, bufnr)
   client.server_capabilities.documentFormattingProvider = false
   client.server_capabilities.documentRangeFormattingProvider = false
   -- enable navic for displaying current code context
-  if client.server_capabilities.documentSymbolProvider then
-    require("nvim-navic").attach(client, bufnr)
-  end
   local wk = require("which-key")
   local default_options = { silent = true }
   wk.register({
