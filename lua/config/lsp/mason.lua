@@ -38,6 +38,7 @@ ensure_installed = {
     "pyright",
     "terraform-ls",
     "yaml-language-server",
+    "rust-analyzer",
     -- Formatter
     "black",
     "prettier",

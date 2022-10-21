@@ -15,11 +15,11 @@ vim.cmd([[
 ]])
 
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({
-	  'git', 
-	  'clone', 
-	  '--depth', 
-	  '1', 
+  Packer_Bootstrap = fn.system({
+	  'git',
+	  'clone',
+	  '--depth',
+	  '1',
 	  'https://github.com/wbthomason/packer.nvim',
 	  install_path
   })
@@ -50,7 +50,10 @@ packer.startup(function(use)
 		config = local_config("lsp.mason"),
 	})
 
-	use({ "neovim/nvim-lspconfig", config = local_config("lsp.lsp") })
+	use({
+		"neovim/nvim-lspconfig",
+		config = local_config("lsp.lsp")
+	})
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -60,7 +63,17 @@ packer.startup(function(use)
 
 	use({
 		"folke/which-key.nvim",
-		config = local_config(""),
+		config = local_config("which-key"),
+	})
+
+	use({
+		"nvim-tree/nvim-web-devicons",
+		config = local_config("nvim-web-devicons"),
+	})
+
+	use({
+		"lewis6991/gitsigns.nvim",
+		config = local_config("gitsigns")
 	})
 
 	use({
