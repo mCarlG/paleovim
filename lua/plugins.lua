@@ -72,6 +72,11 @@ packer.startup(function(use)
 	})
 
 	use({
+		"nvim-tree/nvim-tree.lua",
+		config = local_config("nvim-tree"),
+	})
+
+	use({
 		"lewis6991/gitsigns.nvim",
 		config = local_config("gitsigns")
 	})
@@ -79,6 +84,11 @@ packer.startup(function(use)
 	use({
 		"feline-nvim/feline.nvim",
 		config = local_config("feline"),
+	})
+
+	use({
+		"nanozuki/tabby.nvim",
+		config = local_config("tabby"),
 	})
 
 	use({
