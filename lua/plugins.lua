@@ -40,7 +40,12 @@ packer.init({
 })
 
 packer.startup(function(use)
+
+	use({ "lewis6991/impatient.nvim"})
+
 	use({ "wbthomason/packer.nvim" })
+
+	use({ "nvim-lua/plenary.nvim" })
 
 	use({
 		"williamboman/mason.nvim",
@@ -53,6 +58,23 @@ packer.startup(function(use)
 	use({
 		"neovim/nvim-lspconfig",
 		config = local_config("lsp.lsp")
+	})
+
+	use({
+		"windwp/nvim-autopairs",
+		config = local_config("nvim-autopairs"),
+	})
+
+	use({
+		"hrsh7th/nvim-cmp",
+		requires = { "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "hrsh7th/cmp-cmdline" },
+		config = local_config("nvim-cmp"),
+	})
+
+	use({
+		"L3MON4D3/LuaSnip",
+		requires = { "saadparwaiz1/cmp_luasnip" },
+		config = local_config("LuaSnip"),
 	})
 
 	use({
@@ -92,11 +114,13 @@ packer.startup(function(use)
 	})
 
 	use({
-		"EdenEast/nightfox.nvim",
-		config = local_config("themes.nightfox"),
+		"norcalli/nvim-colorizer.lua",
+		config = local_config("nvim-colorizer"),
+	})
+
+	use({
+		"catppuccin/nvim",
+		as = "catppuccin",
+		config = local_config("themes.catppuccin"),
 	})
 end)
-
-vim.cmd([[
-	colorscheme carbonfox
-]])
