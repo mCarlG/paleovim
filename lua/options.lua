@@ -1,4 +1,4 @@
-local settings = require("settings")
+local settings = require "settings"
 
 vim.opt.number = false
 vim.opt.relativenumber = true
