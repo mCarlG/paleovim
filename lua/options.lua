@@ -9,3 +9,5 @@ vim.opt.relativenumber = true
 vim.opt.termguicolors = true
 vim.opt.showmode = false
 vim.opt.scrolloff = 8
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
