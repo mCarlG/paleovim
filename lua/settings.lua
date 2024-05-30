@@ -5,8 +5,9 @@ settings.treesitter_ensure_installed = {
 	"lua",
 	"rust",
 	"cpp",
+	"c",
 	"toml",
-	"markdown",
+	"python",
 }
 
 return settings

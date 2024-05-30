@@ -1,5 +1,5 @@
-require "bootstrap"
+require "mappings"
 require "autocmds"
+require "bootstrap"
 require "plugins"
 require "options"
-require "mappings"
