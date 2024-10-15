@@ -6,6 +6,12 @@ local function map(mode, lhs, rhs, opts)
 	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+-- Screen navigation
+map('n', "<C-Left>", "<C-w>h")
+map('n', "<C-Down>", "<C-w>j")
+map('n', "<C-Up>", "<C-w>k")
+map('n', "<C-Right>", "<C-w>l")
+
 -- For leader
 map('n', " ", "<NOP>")
 
